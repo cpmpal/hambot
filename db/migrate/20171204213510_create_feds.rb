@@ -3,7 +3,7 @@ class CreateFeds < ActiveRecord::Migration[5.1]
     create_table :feds do |t|
       t.date :date
       t.string :buyer
-      t.boolean[] :ate
+      t.boolean :ate, array: true, default: []
 
       t.timestamps
     end
