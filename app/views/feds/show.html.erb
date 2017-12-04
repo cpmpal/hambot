@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @fed.date %>
+</p>
+
+<p>
+  <strong>Buyer:</strong>
+  <%= @fed.buyer %>
+</p>
+
+<p>
+  <strong>Ate:</strong>
+  <%= @fed.ate %>
+</p>
+
+<%= link_to 'Edit', edit_fed_path(@fed) %> |
+<%= link_to 'Back', feds_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: fed, local: true) do |form| %>
+  <% if fed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fed.errors.count, "error") %> prohibited this fed from being saved:</h2>
+
+      <ul>
+      <% fed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :fed_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buyer %>
+    <%= form.text_field :buyer, id: :fed_buyer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ate %>
+    <%= form.text_field :ate, id: :fed_ate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

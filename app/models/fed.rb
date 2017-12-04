@@ -1,0 +1,2 @@
+class Fed < ApplicationRecord
+end
