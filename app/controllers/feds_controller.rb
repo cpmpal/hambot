@@ -1,6 +1,20 @@
 class FedsController < ApplicationController
   before_action :set_fed, only: [:show, :edit, :update, :destroy]
 
+
+  def maxLen
+    l = 0
+    Fed.all.each do |f|
+      if f.ate.length > l
+	l = f.ate.length
+      end
+    end
+    puts l
+    return l
+  end
+
+  helper_method :maxLen
+
   # GET /feds
   # GET /feds.json
   def index
